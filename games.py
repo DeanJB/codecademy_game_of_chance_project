@@ -38,7 +38,20 @@ def cho_han(call, bet, money=money):
 #Testing Cho Han game
 #cho_han("Odd", 40)
 
+def pick_a_card(bet, money=money):
+    player_one = random.randint(1,10)
+    player_two = random.randint(1,10)
+    if player_one > player_two:
+        print("Congratulations. You win ${bet}.".format(bet=bet))
+        money += bet
+    elif player_two > player_one:
+        print("Sorry. You Lose. Try again.")
+        money -= bet
+    else:
+        print("It was a tie!")
+    print("Your new total is: ${money}".format(money = money))
 
-
+#Testing out Pick a Card Game
+#pick_a_card(15)
 
 #Call your game of chance functions here
